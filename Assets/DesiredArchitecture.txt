@@ -1,0 +1,13 @@
+Main Menu : 
+	Listen for Player Input
+	Invoke Scene change event when play selected
+
+Gameplay :	
+	Listen for Player Input
+	Invoke Player Movement Events
+	Invoke Pause Menu Events
+	Detect and Invoke Game Loop events
+
+Gameplay 2 :
+	Same Input Scheme with different objective
+	
