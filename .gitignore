@@ -61,6 +61,10 @@ sysinfo.txt
 *.unitypackage
 *.app
 
+# Personal Library
+/[Aa]ssets/[Pp]rojectRootFolder/[Ss]cripts/[Hh]elpers/[Ff]unctions.cs
+/[Aa]ssets/[Pp]rojectRootFolder/[Ss]cripts/[Hh]elpers/[Ee]xtensions.cs
+
 # Crashlytics generated file
 crashlytics-build.properties
 
