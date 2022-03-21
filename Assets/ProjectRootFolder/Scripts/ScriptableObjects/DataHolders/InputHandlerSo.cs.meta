@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 14af657b181d03f4387ce0ee4adc7c37
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - movementEventChannel: {fileID: 11400000, guid: e98b642c4e66ccd4da909f390ed8bd40, type: 2}
+  - verticalAxisEventChannel: {fileID: 11400000, guid: 5634ea365990e644e8528b8c3fb89e71, type: 2}
+  - sprintEventChannel: {fileID: 11400000, guid: 16cdb9dd86956bb409d41f0f98d14172, type: 2}
+  - detonateEventChannel: {fileID: 11400000, guid: b0a491c3d41d0c3438776d5705acf769, type: 2}
+  - cameraRotateEventChannel: {fileID: 11400000, guid: bcee57908ad35f24f97571f379ad17c2, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
