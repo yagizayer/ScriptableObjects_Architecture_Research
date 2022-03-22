@@ -9,28 +9,41 @@ namespace Helpers
     [Serializable]
     public class Sound
     {
-        public string name;
-        public bool SelectFromList;
+        [SerializeField] private bool selectFromList;
 
-        [ConditionalField(nameof(SelectFromList), true)]
-        public AudioClip clip;
+        [ConditionalField(nameof(selectFromList), true), SerializeField]
+        private AudioClip clip;
 
-        [ConditionalField(nameof(SelectFromList))]
-        public AudioClips clips;
+        [ConditionalField(nameof(selectFromList)), SerializeField]
+        private AudioClips clips;
 
-        [Range(0f, 1f)] public float volume;
-        [Range(.1f, 3f)] public float pitch;
-        public bool loop;
+        [HideInInspector] public AudioSource audioSource;
 
+        [Range(0f, 1f)] public float volume = .5f;
+        [Range(.1f, 3f)] public float pitch = 1;
+
+        public bool loop = false;
         public bool playOnAwake = false;
 
-        [HideInInspector] public AudioSource Source;
-        public bool ChangeWithPause=false;
-        [ConditionalField(nameof(ChangeWithPause))]
-        [Range(0f, 1f)] public float PauseVolume;
-        [ConditionalField(nameof(ChangeWithPause))]
-        [Range(.1f, 3f)] public float PausePitch;
+        //--------------------------------------------------------------------------------------------------------------
 
+        public Sound()
+        {
+            loop = false;
+            playOnAwake = false;
+            volume = .5f;
+            pitch = 1f;
+        }
+        
+        //--------------------------------------------------------------------------------------------------------------
+        
+        public AudioClip Clip => GetClip();
+        public bool IsPlaying => audioSource.isPlaying;
+        public bool SelectFromList => selectFromList;
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        private AudioClip GetClip() => SelectFromList ? clips.GetRandomClip() : clip;
     }
 
     [Serializable]
@@ -38,10 +51,6 @@ namespace Helpers
     {
         public List<AudioClip> clips;
 
-        public AudioClip GetRandom()
-        {
-            if (clips.Count == 0) return null;
-            return clips[Random.Range(0, clips.Count)];
-        }
+        public AudioClip GetRandomClip() => clips.Count == 0 ? null : clips[Random.Range(0, clips.Count)];
     }
 }
