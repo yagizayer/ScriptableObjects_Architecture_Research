@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14af657b181d03f4387ce0ee4adc7c37, type: 3}
+  m_Name: FloatingJoystickHandler
+  m_EditorClassIdentifier: 
+  touchStartedEventChannel: {fileID: 11400000, guid: 4a51efffedf959842999d0470cf4ad82, type: 2}
+  touchMovedEventChannel: {fileID: 11400000, guid: 3ea873a3856fa534f958a12af72657ec, type: 2}
+  touchStationaryEventChannel: {fileID: 11400000, guid: 44e71fa631630bb43a16dcb89db4217a, type: 2}
+  touchEndedEventChannel: {fileID: 11400000, guid: 517978e2481908d4381a31791845b581, type: 2}
+  joystickMoveEventChannel: {fileID: 11400000, guid: db495ad944635a04c865e265db49f023, type: 2}

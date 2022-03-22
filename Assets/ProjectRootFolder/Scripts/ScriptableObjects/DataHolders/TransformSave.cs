@@ -6,10 +6,10 @@ using UnityEngine;
 
 namespace MetaClasses.ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "New TransformSaver", menuName = "ScriptableObjects/TransformSaver")]
+    [CreateAssetMenu(fileName = "New TransformSave", menuName = "ScriptableObjects/TransformSave")]
     public class TransformSave : ScriptableObject, ISave<TransformValues>
     {
-        [field: SerializeField, ReadOnly] public List<TransformValues> Data { get; set; }
+        [field: SerializeField, ReadOnly] public List<TransformValues> Data { get; set; } = new List<TransformValues>();
 
         public void Save(List<TransformValues> data)
         {

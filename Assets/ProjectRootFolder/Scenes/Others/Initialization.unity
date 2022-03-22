@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b47b110a7546a46b07096565afcf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputHandlerSo: {fileID: 11400000, guid: ecdd0cc2d49c5eb47a7fdeea6ec17541, type: 2}
+  floatingJoystick: {fileID: 11400000, guid: 40090f0250b340a46bb3360b94884a69, type: 2}
 --- !u!1 &1447964395
 GameObject:
   m_ObjectHideFlags: 0

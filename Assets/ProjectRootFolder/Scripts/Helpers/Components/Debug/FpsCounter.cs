@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace PirateDefence.Scripts.Helpers.Components
+namespace Helpers.Components.Debug
 {
     [RequireComponent(typeof(Text))]
     [RequireComponent(typeof(RectTransform))]

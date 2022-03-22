@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 using UnityEngine;
 
-namespace UnityTemplateProjects
+namespace Helpers.Components.Debug
 {
     public class SimpleCameraController : MonoBehaviour
     {

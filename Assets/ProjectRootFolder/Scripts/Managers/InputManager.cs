@@ -1,19 +1,27 @@
 using System;
-using Nano_ZombieBiker_01.Scripts.ScriptableObjects.DataHolders;
+using Helpers;
 using ProjectRootFolder.Scripts.ScriptableObjects.DataHolders;
+using ScriptableObjects;
 using UnityEngine;
 
 namespace ProjectRootFolder.Scripts.Managers
 {
     public sealed class InputManager : MonoBehaviour
     {
-        [SerializeField] private InputHandlerSo inputHandlerSo;
-
+        [SerializeField] private ScriptableObject floatingJoystick;
+        private FloatingJoystickHandler _floatingJoystick;
+        
+        private void OnValidate()
+        {
+            if(!floatingJoystick.ValidateInterface(typeof(IInputHandler)))return;
+            _floatingJoystick = (FloatingJoystickHandler) floatingJoystick;
+        }
+        
         private void OnEnable()
         {
-            inputHandlerSo.EnableAllInput();
+            _floatingJoystick.EnableInput();
         }
-
-        private void FixedUpdate() => inputHandlerSo.Update();
+        
+        private void Update() => _floatingJoystick.Update();
     }
 }
